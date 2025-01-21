@@ -24,9 +24,13 @@ block contenido
             input(type="number" name="min_precio" placeholder="Precio mínimo" class="p-2 border rounded-xl" min="0")
             input(type="number" name="max_precio" placeholder="Precio máximo" class="p-2 border rounded-xl" min="0")
 
-        button(type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl") Filtrar
+        button(type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl") Filtrar
 
     h1(class='text-4xl font-bold mb-6 text-center')= pagina
+    if viajes.length === 0
+        div(class=" text-gray-800 text-xl font-bold mt-8 text-center") 
+            p(class="mb-10") No se encontraron resultados
+            a(href="/viajes" class="bg-indigo-500 text-white p-3 rounded-xl hover:bg-indigo-700 px-5") Ver viajes disponibles
     main(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto")
         include ./layout/bloqueViajes
     

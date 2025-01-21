@@ -1,19 +1,19 @@
 block contenido
-  each viaje in viajes
-    a(href=`viajes/${viaje.slug}`) 
-      div(class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-2xl")
-        img(src=`/img/${viaje.imagen}.jpg`, alt=viaje.titulo, class="w-full h-48 object-cover")
-        div(class="p-4")
-          div(class="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-3")
-            | #{viaje.duracion}
-          h3(class="text-lg font-bold text-gray-800") #{viaje.titulo}
-          div(class="flex items-center my-2")
-            span(class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded") #{viaje.valoracion_promedio}
-            each val in [0, 2, 4, 6, 8]
-              if val <= viaje.valoracion_promedio
-                i(class="fas fa-star text-yellow-400 mx-1")
-          p(class="text-gray-600 text-sm") Saliendo desde #{viaje.salida_desde}
-          p(class="text-gray-600 text-sm") #{viaje.tipo_paquete}
-        div(class="px-4 pt-2 pb-4 border-t")
-          p(class="text-gray-800 font-bold text-lg")  #{formatearDinero(viaje.precio)}
-          p(class="text-gray-500 text-xs mt-1") Incluye impuestos, tasas y cargos
+    each viaje in viajes
+      a(href=`viajes/${viaje.slug}`) 
+        div(class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-2xl")
+          img(src=`/img/${viaje.imagen}.jpg`, alt=viaje.titulo, class="w-full h-48 object-cover")
+          div(class="p-4")
+            div(class="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-3")
+              | #{viaje.duracion}
+            h3(class="text-lg font-bold text-gray-800") #{viaje.titulo}
+            div(class="flex items-center my-2")
+              span(class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded") #{viaje.valoracion_promedio}
+              each val in [0, 2, 4, 6, 8]
+                if val <= viaje.valoracion_promedio
+                  i(class="fas fa-star text-yellow-400 mx-1")
+            p(class="text-gray-600 text-sm") Saliendo desde #{viaje.salida_desde}
+            p(class="text-gray-600 text-sm") #{viaje.tipo_paquete}
+          div(class="px-4 pt-2 pb-4 border-t")
+            p(class="text-gray-800 font-bold text-lg")  #{formatearDinero(viaje.precio)}
+            p(class="text-gray-500 text-xs mt-1") Incluye impuestos, tasas y cargos
