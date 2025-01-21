@@ -1,0 +1,32 @@
+extends ./layout/index
+
+block contenido
+    form(action="/viajes" method="GET" class="mb-6 flex flex-col lg:flex-row justify-between gap-4 p-6 bg-gray-50 rounded-lg")
+        
+        select(name="destino" class="p-2 border rounded-xl")
+            option(value="") Seleccionar Destino
+            option(value="Roma") Roma
+            option(value="Paris") Paris
+            option(value="Canada") Canada
+            option(value="Londres") Londres
+            option(value="Grecia") Grecia
+            option(value="Rio de Janeiro") Rio de Janeiro
+
+        select(name="valoracion_promedio" class="p-2 border rounded-xl")
+            option(value="") Seleccionar Valoración
+            option(value=8) 5 estrellas
+            option(value=6) 4 estrellas
+            option(value=4) 3 estrellas
+            option(value=2) 2 estrellas
+            option(value=0) 1 estrella
+
+        div(class="flex flex-col lg:flex-row gap-4")
+            input(type="number" name="min_precio" placeholder="Precio mínimo" class="p-2 border rounded-xl" min="0")
+            input(type="number" name="max_precio" placeholder="Precio máximo" class="p-2 border rounded-xl" min="0")
+
+        button(type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl") Filtrar
+
+    h1(class='text-4xl font-bold mb-6 text-center')= pagina
+    main(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto")
+        include ./layout/bloqueViajes
+    

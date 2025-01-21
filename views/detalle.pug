@@ -1,0 +1,38 @@
+extends ./layout/index
+
+block contenido
+    main(class="bg-gray-100")
+        div(class="container mx-auto p-6")
+            div(class="flex flex-col lg:flex-row gap-6")
+                div(class="flex-1")
+                    img(src=`/img/${viaje.imagen}_ln.jpg`, alt="imagen del viaje a #{viaje.titulo}", class="w-full h-auto object-cover rounded-lg shadow-md", style="max-height: 600px;")
+                
+                div(class="flex-1 bg-white p-8 rounded-lg shadow-md")
+                    h1(class="text-4xl font-bold text-gray-800 mb-4") #{viaje.titulo}
+                    p(class="text-xl text-gray-600 mt-2 mb-6") #{formatearDinero(viaje.precio)}
+                    div(class="mt-6 mb-8")
+                        h2(class="text-2xl font-semibold text-gray-800 mb-4") Descripción del viaje
+                        p(class="text-gray-600") #{viaje.descripcion}
+
+                    div(class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6")
+                        div(class="bg-white p-4 rounded-lg shadow-lg")
+                            h3(class="font-semibold text-lg text-gray-800") Duración
+                            p(class="text-gray-600 mt-2 lowercase") #{viaje.duracion}
+                        
+                        div(class="bg-white p-4 rounded-lg shadow-lg")
+                            h3(class="font-semibold text-lg text-gray-800") Destino
+                            p(class="text-gray-600 mt-2") #{viaje.destino}
+                        
+                        div(class="bg-white p-4 rounded-lg shadow-lg")
+                            h3(class="font-semibold text-lg text-gray-800") Salida desde
+                            p(class="text-gray-600 mt-2") #{viaje.salida_desde}
+
+                    div(class="mt-6 bg-white p-4 rounded-lg shadow-lg")
+                        h3(class="font-semibold text-lg text-gray-800") Valoración
+                        div(class="flex items-center mt-2")
+                            span(class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded") #{viaje.valoracion_promedio}
+                            each val in [1, 2, 3, 4, 5]
+                                if val <= viaje.valoracion_promedio
+                                    i(class="fas fa-star text-yellow-400 mx-1")                   
+                    div(class="mt-6 text-center")
+                        a(href="/contacto" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition-all duration-300 w-full inline-block") Reservar ahora

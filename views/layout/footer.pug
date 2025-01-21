@@ -1,0 +1,38 @@
+footer(class="bg-gray-100 text-gray-800")
+  div(class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-6")
+    //- Columna 1: Logo y descripción
+    div
+      a(href="/" class="flex flex-row items-center")  
+        img(src="/img/logo.svg" alt="Logo" class="h-12 mb-4")
+        p(class="font-bold text-xl") #{nombreSitio}
+      p(class="text-gray-600 text-sm") 
+        | Explora el mundo con nosotros. Ofrecemos paquetes de viaje inolvidables para todos los destinos. 
+        | Tu aventura comienza aquí.
+    
+    //- Columna 2: Navegación
+    nav
+      h4(class="text-gray-800 font-semibold mb-4") Navegación
+      ul(class="space-y-2")
+        li
+          a(href="/nosotros" class="text-gray-600 hover:text-gray-800 transition duration-300") Nosotros
+        li
+          a(href="/viajes" class="text-gray-600 hover:text-gray-800 transition duration-300") Viajes
+        li
+          a(href="/contacto" class="text-gray-600 hover:text-gray-800 transition duration-300") Contacto
+
+    //- Columna 3: Redes sociales
+    div
+      h4(class="text-gray-800 font-semibold mb-4") Síguenos
+      div(class="flex space-x-4")
+        a(href="#" class="text-gray-600 hover:text-gray-800 transition duration-300")
+          i(class="fab fa-facebook-square text-2xl")
+        a(href="#" class="text-gray-600 hover:text-gray-800 transition duration-300")
+          i(class="fab fa-twitter text-2xl")
+        a(href="#" class="text-gray-600 hover:text-gray-800 transition duration-300")
+          i(class="fab fa-instagram text-2xl")
+        a(href="#" class="text-gray-600 hover:text-gray-800 transition duration-300")
+          i(class="fab fa-linkedin text-2xl")
+  
+  //- Barra inferior
+  div(class="bg-gray-100 py-4 text-center text-sm text-gray-500")
+    | &copy; #{actualYear} #{nombreSitio}. Todos los derechos reservados.

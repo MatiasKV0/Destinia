@@ -1,0 +1,15 @@
+header
+  div(class="flex justify-between items-center")
+    // Logo a la izquierda
+    div
+      a(href="/" class="flex flex-row items-center")  
+        img(src="/img/logo.svg", alt="Logo", class="w-10 ml-10") 
+        p(class="font-bold text-xl") #{nombreSitio}
+
+    // Enlaces a la derecha
+    div
+      nav(class="p-5 font-bold")
+        a(href="/nosotros" class="text-black hover:text-gray-400 mx-5 block md:inline") Nosotros
+        a(href="/viajes" class="text-black hover:text-gray-400 mx-5 block md:inline") Viajes
+        a(href="/contacto" class="text-black hover:text-gray-400 mx-5 block md:inline") Contactanos
+

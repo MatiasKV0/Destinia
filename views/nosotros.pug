@@ -1,0 +1,64 @@
+extends ./layout/index
+
+block contenido
+  section(class="container mx-auto py-12 px-6")
+    h1(class="text-4xl font-bold mb-6") Sobre Nosotros
+
+    // Section: Propuestas de Valor
+    section(class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12")
+      // Texto a la izquierda
+      div
+        h2(class="text-2xl font-semibold text-gray-800 mb-4") Nuestra Promesa
+        p(class="text-lg text-gray-700 leading-relaxed mb-4")
+          | En nuestra agencia de viajes, nos enorgullece brindar experiencias únicas que superen tus expectativas. Creamos recuerdos inolvidables a través de:
+        ul(class="list-disc list-inside text-gray-700 space-y-3")
+          li Experiencias personalizadas diseñadas para ti.
+          li Asesoramiento experto en cada etapa de tu viaje.
+          li Acceso exclusivo a destinos únicos y servicios premium.
+          li Compromiso con la sostenibilidad y el turismo responsable.
+          li Pasión por el descubrimiento y la aventura.
+          li Innovación constante para ofrecerte lo mejor en cada viaje.
+        h2(class="text-2xl font-semibold text-gray-800 my-4 pt-10") Nuestra Garantía
+        p(class="text-lg text-gray-700 leading-relaxed mb-6")
+          | En cada paso del camino, te aseguramos:
+        ul(class="list-disc list-inside text-gray-700 space-y-3 max-w-2xl mx-auto")
+          li Atención personalizada 24/7 durante tu viaje.
+          li Garantía de satisfacción o reembolso.
+          li Transparencia y precios justos, sin costos ocultos.
+          li Seguridad y confianza en cada experiencia.
+          li Flexibilidad para adaptarnos a tus necesidades.
+          li Apoyo y asistencia en cualquier situación imprevista.
+      // Imagen a la derecha
+      div
+        img(src="/img/nosotros.jpg" alt="Sobre Nosotros" class="rounded-lg shadow-lg")
+
+    // Section: Opiniones
+    section(class="bg-gray-100 py-12 px-6 rounded-lg shadow-lg mb-12")
+      h2(class="text-2xl font-semibold text-gray-800 mb-6 text-center") Opiniones de Nuestros Clientes
+      div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6")
+        // Opinión 1
+        div(class="bg-white p-6 rounded-lg shadow-md text-center")
+          p(class="text-gray-700 italic") "Un viaje perfecto desde el inicio hasta el final. La atención al detalle fue increíble."
+          span(class="block mt-4 font-bold text-gray-800") — María López
+        // Opinión 2
+        div(class="bg-white p-6 rounded-lg shadow-md text-center")
+          p(class="text-gray-700 italic") "Gracias a ustedes viví una experiencia única en mi vida. ¡Los recomiendo al 100%!"
+          span(class="block mt-4 font-bold text-gray-800") — Carlos Pérez
+        // Opinión 3
+        div(class="bg-white p-6 rounded-lg shadow-md text-center")
+          p(class="text-gray-700 italic") "Profesionalismo, calidez y pasión por el turismo. ¡Mi familia y yo estamos encantados!"
+          span(class="block mt-4 font-bold text-gray-800") — Sofía García
+
+
+    // Section: Misión y Visión
+    section(class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-5")
+      // Misión
+      div
+        h2(class="text-2xl font-semibold text-gray-800 mb-4") Nuestra Misión
+        p(class="text-lg text-gray-700 leading-relaxed")
+          | Transformar cada viaje en una experiencia inolvidable, diseñando aventuras que conecten a las personas con el mundo.
+      // Visión
+      div
+        h2(class="text-2xl font-semibold text-gray-800 mb-4") Nuestra Visión
+        p(class="text-lg text-gray-700 leading-relaxed")
+          | Ser líderes en la industria del turismo, reconocidos por nuestra innovación, compromiso con el cliente y la sostenibilidad.

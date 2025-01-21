@@ -1,0 +1,14 @@
+block contenido 
+  section(class=" py-12 px-6 my-5 relative bg-cover bg-center rounded-3xl" style="background-image: url('/img/cupon.jpg');") 
+    div(class="flex justify-center items-center")
+      form(action="/" method="POST" class="grid grid-cols-1 gap-4 max-w-lg w-full bg-gradient-to-t from-gray-200 to-gray-50 p-8 rounded-lg shadow-lg")
+        div
+          label(for="nombre" class="block text-gray-700 font-bold mb-2") Nombre
+          input(type="text" name="nombre" id="nombre" class="w-full p-2 border rounded" placeholder="Escribe tu nombre" required)
+        div
+          label(for="email" class="block text-gray-700 font-bold mb-2") Correo Electrónico
+          input(type="email" name="email" id="email" class="w-full p-2 border rounded" placeholder="Escribe tu correo" required)
+        div
+          label(for="mensaje" class="block text-gray-700 font-bold mb-2") Mensaje
+          textarea(name="mensaje" id="mensaje" rows="4" class="w-full p-2 border rounded" placeholder="Escribe tu mensaje aquí" required)
+        button(type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded") Enviar
