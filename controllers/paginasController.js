@@ -29,19 +29,19 @@ const paginaNosotros = (req, res)=>{
 }
 
 const paginaViajes = async (req, res) => {
-    const { destino, valoracion_promedio, min_precio, max_precio } = req.query; // Obtener filtros desde la URL
+    const { destino, valoracion_promedio, min_precio, max_precio } = req.query; 
 
-    // Construir condiciones de filtrado
+    
     const filtros = {};
 
     if (destino) {
-        filtros.destino = destino; // Filtrar por destino
+        filtros.destino = destino; 
     }
 
     if (valoracion_promedio) {
         filtros.valoracion_promedio = {
             [Op.between]: [valoracion_promedio, Number(valoracion_promedio)+1.9]
-        }; // Filtrar por tipo de paquete
+        }; 
     }
 
     if (min_precio || max_precio) {
@@ -64,7 +64,7 @@ const paginaViajes = async (req, res) => {
     }
 
     const viajes = await Viajes.findAll({
-        where: filtros // Aplicar los filtros
+        where: filtros 
     });
 
     const formatearDinero = (valor) => {
